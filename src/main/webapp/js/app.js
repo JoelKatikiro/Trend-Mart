@@ -55,5 +55,6 @@ $("search").addEventListener("input",renderProducts);$("cart-open").addEventList
 $("checkout-button").addEventListener("click",()=>{$("checkout-message").textContent=cart.length?"This is a demo only — checkout and payment are not connected.":"Add an item to your bag before continuing."});
 $("newsletter-form").addEventListener("submit",e=>{e.preventDefault();$("newsletter-message").textContent="Thanks! Newsletter signup is a demo and your address was not saved.";e.target.reset()});
 $("menu-toggle")?.addEventListener("click",()=>{$("nav-links").classList.toggle("open")});
-$("year").textContent=new Date().getFullYear();renderProducts();renderCart();
-// Static GitHub Pages uses the demo catalogue. The Java + MySQL API is hosted separately.
+async function loadProducts(){try{const response=await fetch("api/products",{headers:{Accept:"application/json"}});if(!response.ok)throw new Error("API unavailable");const data=await response.json();if(!Array.isArray(data))throw new Error("Unexpected API response");products=data.map(p=>({id:Number(p.id),name:String(p.name),category:p.category||"Other",price:Number(p.price),image:p.image||"",tag:"From the catalogue"}));}catch{products=demoProducts;}renderProducts();renderCart()}
+$("year").textContent=new Date().getFullYear();loadProducts();
+// GitHub Pages falls back to demo products because it cannot run Java Servlets or MySQL.
