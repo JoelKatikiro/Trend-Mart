@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover your next favourite thing at Trend Mart.">
+  <title>Trend Mart — Find your next favourite</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">THE EVERYDAY EDIT — Fresh finds, made for you</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Trend Mart home"><span class="brand-mark">T.</span> trend<span>mart</span></a>
+    <nav id="nav-links" class="nav-links" aria-label="Main navigation">
+      <a href="#shop">Shop all</a><a href="#story">Our story</a><a href="#newsletter">Get updates</a>
+    </nav>
+    <button class="bag-button" id="cart-open" aria-label="Open shopping bag">Bag <span id="cart-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A little something for every day</p>
+        <h1>Good finds.<br><em>Great feeling.</em></h1>
+        <p class="hero-text">Thoughtful picks for your wardrobe, your space and all the little things that make a day.</p>
+        <a class="primary-button" href="#shop">Explore the collection <span>↗</span></a>
+        <div class="hero-note"><span class="spark">✳</span> Curated with a little extra care</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Fashion and lifestyle editorial collage">
+        <div class="hero-image image-one"></div><div class="hero-image image-two"></div>
+        <div class="hero-sticker">THE<br>GOOD<br>STUFF <span>✳</span></div>
+        <div class="hero-caption">YOUR NEW FAVOURITES, RIGHT THIS WAY.</div>
+      </div>
+    </section>
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">The good stuff</p><h2>Find your <em>favourite.</em></h2></div><p class="section-description">A considered mix of everyday essentials and pieces worth keeping.</p></div>
+      <div class="shop-tools">
+        <div class="category-list" aria-label="Filter products">
+          <button class="category-chip active" data-category="All">All finds</button>
+          <button class="category-chip" data-category="Style">Style</button>
+          <button class="category-chip" data-category="Home">Home</button>
+          <button class="category-chip" data-category="Tech">Tech</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Find something..." aria-label="Search products"></label>
+      </div>
+      <p id="result-count" class="result-count">A few favourites to get you started.</p>
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+    </section>
+    <section class="story-section" id="story">
+      <div class="story-symbol">✳</div><div><p class="eyebrow">A better kind of browse</p><h2>Little things.<br><em>Big main-character energy.</em></h2></div>
+      <p>Trend Mart is your feel-good corner of the internet: an easy place to find useful, beautiful and just-because things. Take a look around and find what feels like you.</p>
+    </section>
+    <section class="newsletter" id="newsletter"><div><p class="eyebrow">Good things in your inbox</p><h2>Stay in the <em>loop.</em></h2><p>New finds, fresh inspiration, no unnecessary noise.</p></div><form id="newsletter-form"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required><button class="primary-button" type="submit">Count me in ↗</button><p id="newsletter-message" class="form-message" aria-live="polite"></p></form></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">T.</span> trend<span>mart</span></a><p>Find your next favourite. © <span id="year"></span> Trend Mart</p><a href="#shop">Back to the good stuff ↑</a></footer>
+  <div id="cart-backdrop" class="cart-backdrop" hidden></div>
+  <aside id="cart" class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">Your picks</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button id="cart-close" class="close-button" aria-label="Close shopping bag">×</button></div>
+    <div id="cart-items" class="cart-items"></div><div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div><button id="checkout-button" class="primary-button checkout-button">Continue to checkout ↗</button><p id="checkout-message" class="form-message">Demo storefront: checkout is not connected.</p></div>
+  </aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
