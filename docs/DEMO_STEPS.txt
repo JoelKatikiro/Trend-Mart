@@ -1,0 +1,9 @@
+TREND MART — QUICK REVIEW DEMO
+1. Explain the stack and folder structure.
+2. Open database/schema.sql; explain primary and foreign keys.
+3. Run schema.sql in MySQL Workbench and show the products table.
+4. Explain: browser -> ProductServlet -> ProductDAO -> JDBC -> MySQL -> JSON.
+5. If deployed, open /trend-mart/api/products to show JSON.
+6. Demonstrate search, category filters, add to bag, quantity changes and subtotal.
+7. Resize browser to mobile width and show responsive navigation/product grid.
+8. Be honest: account login, real orders and payments are future work.
